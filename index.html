@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fakhrul62.github.io/icons/css/fontawesome.css">
+    <link rel="stylesheet" href="https://fakhrul62.github.io/icons/css/sharp-light.css">
+    <style>
+        .fa-user-plus {
+            -webkit-text-stroke-width: 2px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-center py-5">
+        <h1 class="text-5xl font-black">Add New User - Recap</h1>
+    </header>
+    <main class="w-11/12 mx-auto">
+        <!-- top buttons  -->
+        <div class="flex justify-center">
+            <button class="btn border-zinc-700 shadow-[4px_4px_#3f454f] hover:shadow-[0px_0px_#3f454f]"
+                onclick="startEngine()">
+                <i class="fa-sharp fa-light fa-user-plus"></i>
+            </button>
+            <div class="join shadow-[4px_4px_#3f454f] hover:shadow-[0px_0px_#3f454f] transition-all w-1/2 mx-2">
+                <input class="input w-full input-bordered join-item border-zinc-700" id="search-input"
+                    placeholder="Search ... Name, Gender, Age, City, Country, Timzone" />
+                <button class="btn join-item border-zinc-700" onclick="searchInput()" id="search-btn"><i
+                        class="fa-sharp fa-light fa-magnifying-glass"></i></button>
+            </div>
+            <button class="btn border-zinc-700 shadow-[4px_4px_#3f454f] hover:shadow-[0px_0px_#3f454f]"
+                onclick="sortBtn()">
+                <i class="fa-sharp fa-light fa-arrow-down-arrow-up"></i>
+            </button>
+
+        </div>
+        <!-- all card box -->
+        <div class="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-10 mt-10" id="card-box"></div>
+        <!-- show more  -->
+        <div class="text-center my-10"><button
+                class="btn justify-center border-zinc-700 shadow-[4px_4px_#3f454f] hover:shadow-[0px_0px_#3f454f] transition-all"
+                onclick="showMore()" id="show-more" hidden>Show More</button></div>
+
+
+    </main>
+
+    <script src="https://fakhrul62.github.io/icons/js/fontawesome.js"></script>
+    <script src="https://fakhrul62.github.io/icons/js/sharp-light.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
