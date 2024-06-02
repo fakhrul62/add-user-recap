@@ -65,12 +65,12 @@ const searchInput = () => {
     const searchInputString = document.getElementById("search-input").value.toLowerCase();
     const searchInputValue = document.getElementById("search-input").value;
     document.getElementById("search-input").value = '';
-    const searchInputGender = searchInputString.toString().slice(0, 2);
+    const searchInputGender = searchInputString.toString().slice(0, 4);
 
     const filteredData = storeAllData.filter(user =>
         user.name.first.toLowerCase().includes(searchInputString) || 
         user.name.last.toLowerCase().includes(searchInputString) || 
-        user.gender.slice(0, 2).includes(searchInputGender) || 
+        user.gender.slice(0, 4).includes(searchInputGender) || 
         user.dob.age.toString().includes(searchInputValue) ||
         user.location.state.toLowerCase().includes(searchInputString) ||
         user.location.country.toLowerCase().includes(searchInputString) ||
